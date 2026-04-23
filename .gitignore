@@ -45,8 +45,14 @@ desktop.ini
 *.log
 
 # Downloaded datasets and scraped images
-car_vision_project/data/*
+car_vision_project/data/*/
+car_vision_project/data/**/*.jpg
+car_vision_project/data/**/*.jpeg
+car_vision_project/data/**/*.png
+car_vision_project/data/**/*.webp
+car_vision_project/data/**/*.bmp
 !car_vision_project/data/.gitkeep
+!car_vision_project/data/*.py
 
 # Training artifacts
 car_vision_project/artifacts/*

@@ -1,0 +1,30 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Web API and configuration
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+jinja2==3.1.5
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# Machine learning and data processing
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+numpy==2.2.1
+pillow==11.1.0
+scikit-learn==1.6.0
+tqdm==4.67.1
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Data collection
+icrawler==0.6.10
+
+# Testing and quality
+pytest==8.3.4
+pytest-cov==6.0.0
+httpx==0.28.1
+ruff==0.8.4
+mypy==1.14.1
