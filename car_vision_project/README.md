@@ -99,6 +99,13 @@ Current production-oriented inference setup:
 
 The API loads the class list from `classes.txt` in alphabetical order and maps inference indices directly to class labels.
 
+Important note for fresh clones:
+
+- `classes.txt` is tracked in Git for reproducibility
+- the trained `.pth` checkpoint is intentionally ignored to keep the repository lightweight
+- to run real inference, place your checkpoint at `car_vision_project/artifacts/best_car_model.pth` or set `MODEL_CHECKPOINT_PATH` to your local file
+- if the checkpoint is missing, `/health` will report `model_loaded: false` and `/analyze-car` will return a model availability error
+
 ## Local Installation
 
 From the repository root:
