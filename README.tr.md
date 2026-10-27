@@ -59,6 +59,7 @@ flowchart LR
     ├── .env.example
     ├── Dockerfile
     ├── README.md         # İngilizce ayrıntılı teknik belge
+    ├── README.tr.md      # Türkçe ayrıntılı teknik belge
     ├── requirements.txt
     ├── config.py
     └── train.py
@@ -177,7 +178,7 @@ Testler API durumunu, dosya yükleme kontrollerini, tahmin sonuçlarının yapı
 - Başarı oranı, eğitim sonucu olarak raporlanmıştır; ağırlıklar ve veri kümesi olmadan bağımsız doğrulama sınırlıdır.
 - Sistem, onaylanmış bir üretim servisi veya ticari araç fiyatlama sistemi olarak sunulmuyor.
 
-Ayrıntılı teknik mimari ve yapılandırma için [İngilizce paket düzeyi README](car_vision_project/README.md) dosyasına geçebilirsin. **Bu bağlantı İngilizce belgeye gider.**
+Ayrıntılı teknik mimari ve yapılandırma için [Türkçe teknik belgeyi](car_vision_project/README.tr.md) açabilirsin. [English technical documentation](car_vision_project/README.md) ayrı olarak mevcuttur.
 
 ## Lisans
 
