@@ -1,4 +1,6 @@
-# Car Vision Project
+# Car Vision Project — Technical Reference
+
+**English | [Türkçe](README.tr.md)** · [Project overview](../README.md)
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-ResNet50-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -7,22 +9,22 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 
-Production-ready computer vision system for **Turkish car market recognition**.  
+A **portfolio-oriented computer vision prototype** for Turkish car market recognition.  
 The project combines a **custom-trained PyTorch ResNet50 model**, a **FastAPI inference API**, and a **modern Tailwind-based web UI** to identify vehicles from exterior photos and enrich the prediction with technical feature and valuation data.
 
 ## Project Overview
 
-This repository was built as an end-to-end MLOps-style vision product, not just a notebook experiment.
+This repository was built as an end-to-end vision application prototype, not just a notebook experiment.
 
 Highlights:
 
 - Custom-trained **ResNet50** classifier for the Turkish car market
 - **105 vehicle classes** derived from real-world make/model/year folders
-- **60%+ Top-1 accuracy** on the current trained model
+- **60%+ Top-1 accuracy reported for the trained checkpoint** (not reproducible from the published repository without the model weights and evaluation data)
 - FastAPI backend with `/health`, `/analyze-car`, and browser UI at `/`
 - TailwindCSS drag-and-drop frontend with image preview and live results cards
 - Top-3 ranked predictions with confidence bars
-- Robust fallback logic so feature and valuation lookups **never fail** for unseen classes
+- Fallback logic for feature and valuation lookup on classes absent from the mock catalog
 - Dockerized deployment and editable local package install
 - Test coverage for API behavior, top-k predictions, and fallback services
 
@@ -47,7 +49,7 @@ flowchart LR
   Accepts an uploaded exterior car image and predicts the most likely class label.
 
 - **Top-K Inference**  
-  Returns the primary prediction plus the **Top-3 predictions** with calibrated confidence scores.
+  Returns the primary prediction plus the **Top-3 predictions** with calibrated model confidence values.
 
 - **Graceful Fallbacks**  
   If a predicted class is not present in the mock feature or valuation dictionaries, the system returns a generic response instead of failing.
@@ -90,7 +92,7 @@ car_vision_project/
 
 ## Model Artifacts
 
-Current production-oriented inference setup:
+Documented inference configuration:
 
 - Weights: `car_vision_project/artifacts/best_car_model.pth`
 - Labels: `car_vision_project/artifacts/classes.txt`
