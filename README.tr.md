@@ -140,7 +140,7 @@ Windows PowerShell için örnek:
 docker run --rm `
   -p 8000:8000 `
   --env-file .env `
-  -v "\${PWD}\car_vision_project\artifacts:/app/car_vision_project/artifacts:ro" `
+  -v "${PWD}\car_vision_project\artifacts:/app/car_vision_project/artifacts:ro" `
   car-vision-api
 ```
 
