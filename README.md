@@ -1,5 +1,7 @@
 # Car Vision Project
 
+**English | [Türkçe](README.tr.md)**
+
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-ResNet50-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -7,14 +9,14 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Production-ready computer vision system for Turkish car market recognition.
+A portfolio-oriented computer vision prototype for vehicle recognition in the Turkish automotive market.
 
 This repository combines a custom-trained PyTorch `ResNet50`, a FastAPI inference API, and a modern Tailwind-based web UI to identify vehicles from exterior photos and enrich the result with feature and valuation data.
 
 ## Why This Repo Is Different
 
 - Custom-trained model for **105 Turkish market make/model/year classes**
-- **60%+ Top-1 accuracy** on the current trained checkpoint
+- **60%+ Top-1 accuracy reported for the trained checkpoint** (weights and evaluation dataset are not included in this repository; reproduce independently before relying on this figure)
 - Browser UI at `/` plus API endpoints for integration use
 - Top-3 predictions with confidence bars
 - Fallback feature and valuation responses so the API does not break on unmapped classes
@@ -90,9 +92,11 @@ pip install -e .
 
 Create a local environment file:
 
-```bash
-copy car_vision_project\.env.example .env
+```powershell
+Copy-Item car_vision_project/.env.example .env
 ```
+
+On macOS/Linux use `cp car_vision_project/.env.example .env`.
 
 ## Model Checkpoint Note
 
@@ -136,7 +140,7 @@ docker build -f car_vision_project/Dockerfile -t car-vision-api .
 
 Run:
 
-```bash
+```bat
 docker run --rm ^
   -p 8000:8000 ^
   --env-file .env ^
@@ -145,6 +149,9 @@ docker run --rm ^
 ```
 
 ## API Snapshot
+
+The JSON payloads below are **illustrative examples**, not evidence that the repository contains a loadable trained model or live market valuation feed.
+
 
 ### `GET /health`
 
@@ -235,6 +242,9 @@ pytest car_vision_project/tests
 ```
 
 ## More Detail
+
+The package-level technical reference is currently **English**; the [Turkish main README](README.tr.md) includes the core setup and usage workflow.
+
 
 The package-level technical documentation lives here:
 
