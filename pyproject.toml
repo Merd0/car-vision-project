@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "car-vision-project"
 version = "0.1.0"
-description = "Production-ready car image recognition and valuation API."
+description = "Portfolio prototype for car recognition using ResNet50 and FastAPI, with mock valuation examples."
 readme = "car_vision_project/README.md"
 requires-python = ">=3.11"
 authors = [
-    { name = "Car Vision Team" }
+    { name = "Mert Aydın" }
 ]
 dependencies = [
     "fastapi==0.115.6",
@@ -40,7 +40,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://example.com/car-vision-project"
+Homepage = "https://github.com/Merd0/car-vision-project"
 
 [tool.setuptools.packages.find]
 include = ["car_vision_project*"]
