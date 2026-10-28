@@ -49,12 +49,12 @@ flowchart LR
   Accepts an uploaded exterior car image and predicts the most likely class label.
 
 - **Top-K Inference**  
-  Returns the primary prediction plus the **Top-3 predictions** with calibrated model confidence values.
+  Returns the primary prediction plus the **Top-3 predictions** with model confidence values. These scores are not claimed to be independently calibrated.
 
 - **Graceful Fallbacks**  
   If a predicted class is not present in the mock feature or valuation dictionaries, the system returns a generic response instead of failing.
 
-- **Flask-Friendly Exports**  
+- **Training Artifacts**  
   The training pipeline exports:
   - `best_car_model.pth`
   - `classes.txt`
